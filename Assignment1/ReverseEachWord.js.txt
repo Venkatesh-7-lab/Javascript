@@ -1,0 +1,25 @@
+function reverseEachWord(str) {
+    result="";
+    let w="";
+    str+=" ";
+    for(let i=0;i<str.length;i++)
+    {
+    
+        if(str.charAt(i)!==" ") 
+        {
+            w+=str.charAt(i);
+        }
+        else 
+        {
+            let r="";
+            for(let j=0;j<w.length;j++)
+            {
+                r+=w.charAt((w.length-1)-j);
+            }
+            result=result+r+" ";
+            w="";
+        }
+    }
+    return result;
+}
+console.log(reverseEachWord("This is a sunny day"));
